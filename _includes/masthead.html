@@ -5,21 +5,47 @@
       <nav id="site-nav" class="greedy-nav">
         <button><span class="navicon"></span></button>
         <ul class="visible-links">
-          <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/index.html' %}selected{% endif %}">
-            <a href="{{ base_path }}/">{{ site.title }}</a>
+          <li class="masthead__menu-item masthead__menu-item--lg persist {% if page.url == '/' or page.url == '/jp/' or page.url == '/index.html' %}selected{% endif %}">
+            {% if page.url contains '/jp/' %}
+              <a href="{{ base_path }}/jp/">{{ site.title }}</a>
+            {% else %}
+              <a href="{{ base_path }}/">{{ site.title }}</a>
+            {% endif %}
           </li>
           {% for link in site.data.navigation.main %}
             {% if link.url contains 'http' %}
               {% assign domain = '' %}
+              {% assign nav_url = link.url %}
             {% else %}
               {% assign domain = base_path %}
+              {% if page.url contains '/jp/' %}
+                {% if link.url == '/' %}
+                  {% assign nav_url = '/jp/' %}
+                {% else %}
+                  {% assign nav_url = '/jp' | append: link.url %}
+                {% endif %}
+              {% else %}
+                {% assign nav_url = link.url %}
+              {% endif %}
             {% endif %}
             <li class="masthead__menu-item {% if page.url contains link.url and link.url != '/' %}selected{% endif %}">
-              <a href="{{ domain }}{{ link.url }}">{{ link.title }}</a>
+              <a href="{{ domain }}{{ nav_url }}">{{ link.title }}</a>
             </li>
           {% endfor %}
-          <li id="theme-toggle" class="masthead__menu-item persist tail">
-            <a role="button" aria-labelledby="theme-icon"><i id="theme-icon" class="fa-solid fa-sun" aria-hidden="true" title="toggle theme"></i></a>
+          <li id="lang-toggle" class="masthead__menu-item persist tail" style="font-size: 0.85em; white-space: nowrap;">
+            {% if page.url contains '/jp/' %}
+              <div style="display: flex; align-items: center; margin: 0 1rem; padding: 0.5rem 0; color: var(--global-masthead-link-color);">
+                <a href="{{ base_path }}{{ page.url | replace_first: '/jp/', '/' }}" style="display: inline; margin: 0; padding: 0; color: var(--global-masthead-link-color); text-decoration: none;" aria-label="Switch to English">EN</a>
+                <span style="margin: 0 0.5rem; color: var(--global-masthead-link-color);">/</span>
+                <span style="font-weight: bold; text-decoration: underline; text-decoration-color: var(--global-text-color); color: var(--global-text-color);" aria-label="Current language Japanese">JA</span>
+              </div>
+            {% else %}
+              <div style="display: flex; align-items: center; margin: 0 1rem; padding: 0.5rem 0; color: var(--global-masthead-link-color);">
+                <span style="font-weight: bold; text-decoration: underline; text-decoration-color: var(--global-text-color); color: var(--global-text-color);" aria-label="Current language English">EN</span>
+                <span style="margin: 0 0.5rem; color: var(--global-masthead-link-color);">/</span>
+                <a href="{{ base_path }}/jp{{ page.url }}" style="display: inline; margin: 0; padding: 0; color: var(--global-masthead-link-color); text-decoration: none;" aria-label="Switch to Japanese">JA</a>
+              </div>
+            {% endif %}
           </li>
         </ul>
         <ul class="hidden-links hidden"></ul>
