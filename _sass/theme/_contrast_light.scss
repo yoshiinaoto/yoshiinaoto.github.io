@@ -63,13 +63,13 @@ $sidebar-screen-min-width   : 1024px;
 
 /* Text selection styling for light theme */
 ::selection {
-  background-color: var(--global-selection-bg-color);
-  color: var(--global-selection-text-color);
+  background-color: var(--global-text-color);
+  color: var(--global-bg-color);
 }
 
 ::-moz-selection {
-  background-color: var(--global-selection-bg-color);
-  color: var(--global-selection-text-color);
+  background-color: var(--global-text-color);
+  color: var(--global-bg-color);
 }
 
 /* Override notice colors for high contrast */

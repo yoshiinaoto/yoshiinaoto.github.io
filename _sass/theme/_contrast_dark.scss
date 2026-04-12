@@ -59,13 +59,13 @@ html[data-theme="dark"] {
 
 /* Text selection styling for dark theme */
 html[data-theme="dark"] ::selection {
-  background-color: var(--global-selection-bg-color);
-  color: var(--global-selection-text-color);
+  background-color: var(--global-text-color);
+  color: var(--global-bg-color);
 }
 
 html[data-theme="dark"] ::-moz-selection {
-  background-color: var(--global-selection-bg-color);
-  color: var(--global-selection-text-color);
+  background-color: var(--global-text-color);
+  color: var(--global-bg-color);
 }
 
 /* Override notice colors for high contrast in dark mode */
