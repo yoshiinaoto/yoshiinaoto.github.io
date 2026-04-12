@@ -11,54 +11,51 @@ redirect_from:
 
 Education
 ======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+* Ph.D in Computer Science, Institute of Science Tokyo (formerly Tokyo Institute of Technology), Mar 2027 (expected)
+* M.S. in Computer Science, Tokyo Institute of Technology, Mar 2024
+* B.S. in Computer Science, Tokyo Institute of Technology, Mar 2022
 
 Work experience
 ======
-* Spring 2024: Academic Pages Collaborator
-  * GitHub University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+* Jul 2022 - present: Research Assistant
+  * Institute of Science Tokyo
+  * Duties included: Assist in contrast sensitivity measurement experiments
+  * Supervisor: Suguru Saito
 
-* Fall 2015: Research Assistant
-  * GitHub University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * GitHub University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
+* Jun - Aug 2024, 2023, 2022: Teaching Assistant of Parallel Programming Class
+  * Tokyo Institute of Technology
+  * Duties included:
+    * Facilitated class exercises
+    * Managed the time schedule of class exercises
+    * Acted as the TA leader (only in 2024)
+  * Supervisor: Suguru Saito
   
 Skills
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* Programming
+  * Java
+  * Python, PyTorch
+  * MATLAB
+  * OpenGL, GLSL, HLSL
+  * OpenCV
+  * C, C++
+* 5 years of experience in developing with Linux OS
+* Data Science and AI
+  * Earned two [open badges](https://wallet.openbadge.net/public/user/92bc2a0a-ed99-4fc7-a733-5e338f5a2898) in Data Science and AI from Institute of Science Tokyo
 
 Publications
 ======
+Coming soon...
+{% comment %}
   <ul>{% for post in site.publications reversed %}
     {% include archive-single-cv.html %}
   {% endfor %}</ul>
-  
-Talks
+{% endcomment %}
+
+Awards
 ======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
+Coming soon...
   
 Service and leadership
 ======
-* Currently signed in to 43 different slack teams
+* Involved as captain of the American football club in my college
