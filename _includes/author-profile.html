@@ -44,6 +44,13 @@
       {% if author.employer %}
         <li class="author__desktop"><i class="fas fa-fw fa-building-columns icon-pad-right" aria-hidden="true"></i>{% if page.url contains '/jp/' and author.employer_jp %}{{ author.employer_jp }}{% elsif author.employer_en and page.url contains '/jp/' == false %}{{ author.employer_en }}{% else %}{{ author.employer }}{% endif %}</li>
       {% endif %}
+      {% if author.department %}
+        <li class="author__desktop">
+          {% if author.department_url %}<a href="{{ author.department_url }}">{% endif %}
+          <i class="fa-solid fa-fw fa-building icon-pad-right" aria-hidden="true"></i>{% if page.url contains '/jp/' and author.department_jp %}{{ author.department_jp }}{% elsif author.department_en and page.url contains '/jp/' == false %}{{ author.department_en }}{% else %}{{ author.department }}{% endif %}
+          {% if author.department_url %}</a>{% endif %}
+        </li>
+      {% endif %}
       {% if author.uri %}
         <li><a href="{{ author.uri }}"><i class="fas fa-fw fa-link icon-pad-right" aria-hidden="true"></i>{{ site.data.ui-text[site.locale].website_label | default: "Website" }}</a></li>
       {% endif %}
