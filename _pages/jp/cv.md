@@ -1,6 +1,6 @@
 ---
 layout: archive
-title: "履歴書"
+title: "経歴"
 permalink: /jp/cv/
 author_profile: true
 ---
