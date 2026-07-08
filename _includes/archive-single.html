@@ -75,6 +75,9 @@
         {% if post.code %}
           <a href="{{ post.code }}" title="Code" style="text-decoration: none;"><span class="material-symbols-outlined" style="color: #1f1f1f; font-size: 24px; vertical-align: middle;">code</span></a>
         {% endif %}
+        {% if post.web %}
+          <a href="{{ post.web }}" title="Project Page" style="text-decoration: none;"><span class="material-symbols-outlined" style="color: #1f1f1f; font-size: 24px; vertical-align: middle;">web</span></a>
+        {% endif %}
       </p>
     {% endif %}
 
