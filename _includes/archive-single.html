@@ -58,7 +58,7 @@
     <p class="archive__item-excerpt" itemprop="description"><p>{{ post.excerpt | markdownify | remove: '<p>' | remove: '</p>' }}<strong><a href="{{ base_path }}{{ post.url }}" rel="permalink"> Read more</a></strong></p></p>
     {% endif %}
 
-    {% if post.doi or post.paperurl or post.slidesurl or post.bibtexurl or post.code %}
+    {% if post.doi or post.paperurl or post.slidesurl or post.bibtexurl or post.code or post.web %}
       <p style="display: flex; gap: 8px; align-items: center; flex-wrap: wrap;">
         {% if post.doi %}
           <a href="{{ post.doi }}" title="DOI" style="text-decoration: none;"><span class="material-symbols-outlined" style="color: #1f1f1f; font-size: 24px; vertical-align: middle;">link</span></a>
